@@ -1,66 +1,89 @@
-#body{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: hsl(0, 0%, 95%);
-}
-
-#calculator{
+#calculator {
     font-family: arial, sans-serif;
     background-color: black;
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 90%; /* Adjust max-width for responsiveness */
     overflow: hidden;
-
 }
 
-#display{
+#display {
     width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
+    padding: 15px; /* Decrease padding for smaller screens */
+    font-size: 3rem;
+    text-align: right;
     border: none;
     background-color: black;
-    color: white ;
-    
-
+    color: white;
 }
 
-#keys{
+#keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 25px;
+    padding: 15px; /* Decrease padding for smaller screens */
 }
 
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+button {
+    width: 100%;
+    height: 80px; /* Adjust button height for smaller screens */
+    border-radius: 50%; /* Make buttons more circular */
     border: none;
     background-color: hsl(0 , 0%, 30%);
     color: white;
-    font-size: 3rem;
+    font-size: 2rem; /* Decrease font size for smaller screens */
     font-weight: bold;
     cursor: pointer;
 }
-button:hover{
-    background-color: hsl(0, 0%, 40%);;
+
+/* Adjust hover and active styles for better visibility */
+button:hover {
+    background-color: hsl(0, 0%, 40%);
 }
-button:active{
+
+button:active {
     background-color: hsl(0, 0%, 50%);
 }
-.operator-btn{
+
+.operator-btn {
     background-color: hsl(0, 5%, 25%);
 }
-.operator-btn:hover{
+
+.operator-btn:hover {
     background-color: hsl(30, 100%, 65%);
 }
-.operator-btn:active{
+
+.operator-btn:active {
     background-color: hsl(30, 100%, 75%);
 }
-.isequalto{
+
+.isequalto {
     background-color: hsl(30, 100%, 55%);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    #calculator {
+        max-width: 90%;
+    }
+
+    #display {
+        padding: 10px;
+        font-size: 2.5rem;
+    }
+
+    #keys {
+        padding: 10px;
+    }
+
+    button {
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    #calculator {
+        max-width: 500px; /* Set a specific width for larger screens */
+    }
 }
