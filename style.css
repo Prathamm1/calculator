@@ -11,7 +11,7 @@
     font-family: arial, sans-serif;
     background-color: black;
     border-radius: 15px;
-    max-width: 500px;
+    width: min-content;
     overflow: hidden;
 
 }
