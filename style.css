@@ -1,44 +1,66 @@
-#calculator {
+#body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+
+#calculator{
     font-family: arial, sans-serif;
     background-color: black;
     border-radius: 15px;
-    width: 80%; /* Adjusted width for better fit */
-    max-width: 600px; /* Added max-width for larger screens */
+    width: min-content;
     overflow: hidden;
-    margin: auto; /* Centering the calculator */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+
 }
 
-#keys {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusted for responsiveness */
-    gap: 10px; /* Adjusted gap for better fit */
-    padding: 10px; /* Adjusted padding for better fit */
-}
-
-button {
-    width: 100%; /* Adjusted width for better fit */
-    height: 80px; /* Adjusted height for better fit */
-    border-radius: 15px; /* Adjusted border radius for better fit */
-    font-size: 2.5rem; /* Adjusted font size for better fit */
-}
-
-#display {
+#display{
     width: 100%;
-    padding: 15px; /* Adjusted padding for better fit */
-    font-size: 3.5rem; /* Adjusted font size for better fit */
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: black;
+    color: white ;
+    
+
 }
 
-/* Add media query for landscape orientation if needed */
-@media only screen and (orientation: landscape) {
-    #keys {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    }
-    button {
-        font-size: 2rem;
-        height: 60px;
-    }
-    #display {
-        font-size: 3rem;
-    }
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0 , 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(0, 0%, 40%);;
+}
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+.operator-btn{
+    background-color: hsl(0, 5%, 25%);
+}
+.operator-btn:hover{
+    background-color: hsl(30, 100%, 65%);
+}
+.operator-btn:active{
+    background-color: hsl(30, 100%, 75%);
+}
+.isequalto{
+    background-color: hsl(30, 100%, 55%);
 }
