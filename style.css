@@ -6,38 +6,18 @@
     max-width: 400px; /* Added max-width for larger screens */
     overflow: hidden;
     margin: auto; /* Centering the calculator */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 #keys{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjusted for responsiveness */
-    gap: 10px;
-    padding: 15px; /* Reduced padding for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Adjusted for responsiveness */
+    gap: 5px; /* Reduced gap for smaller screens */
+    padding: 5px; /* Reduced padding for smaller screens */
 }
 
 button{
     width: 100%; /* Adjusted width for responsiveness */
-    height: 80px; /* Reduced height for smaller screens */
-    border-radius: 15px; /* Reduced border-radius for smaller buttons */
-    font-size: 2.5rem; /* Reduced font size for smaller screens */
-}
-
-#display{
-    width: 100%;
-    padding: 15px; /* Reduced padding for smaller screens */
-    font-size: 3rem; /* Reduced font size for smaller screens */
-}
-
-/* Add media query for landscape orientation if needed */
-@media only screen and (orientation: landscape) {
-    #keys {
-        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    }
-    button {
-        font-size: 2rem;
-        height: 60px;
-    }
-    #display {
-        font-size: 2.5rem;
-    }
-}
+    height: 60px; /* Reduced height for smaller screens */
+    border-radius: 10px; /* Reduced border-radius for smaller buttons */
+    font-size: 2rem; /* Re
